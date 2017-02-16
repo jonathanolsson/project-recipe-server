@@ -1,8 +1,10 @@
 var express = require("express");
 var test = express.Router();
+var fs = require('fs');
+var data = require("./getData.js");
 
 test.get('/', function(req, res){
-	res.json({"message":"Hello to the world of testing!", "quantity":"All of dem!"});
+	res.send(data);
 });
 
 module.exports = test;
